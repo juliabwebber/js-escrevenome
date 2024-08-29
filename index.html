@@ -1,0 +1,13 @@
+p5Dynamic = p5(function(p) {
+  function clear() {
+    p.background('lightgray');
+  }
+  p.setup = function() {
+    p.createCanvas(400, 400);
+    p.background('lightgray');
+    p5clear.onclick = clear;
+  };
+  p.mousePressed = p.mouseDragged = function() {
+    p.circle(p.mouseX, p.mouseY, p5radius.value * 2);
+  };
+})
